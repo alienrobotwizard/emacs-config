@@ -60,6 +60,7 @@
 (global-set-key	 (kbd "M-r")            'query-replace-regexp)
 (global-set-key	 (kbd "C-M-r")          'query-replace)
 (global-set-key  (kbd "C-M-z")          'suspend-emacs)
+(global-set-key  (kbd "C-x C-b")        'list-buffers)
 
 ;; (global-unset-key (kbd "C-M-3")	    )
 (global-set-key	 (kbd "C-M-3")          'comment-region)

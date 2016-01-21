@@ -46,6 +46,7 @@
 (require 'starter-kit-ruby)
 (require 'thedatachef-keybindings)
 (require 'thedatachef-javascript)
+(require 'thedatachef-lookandfeel)
 
 (load custom-file 'noerror)
 
@@ -53,11 +54,6 @@
 (setq default-frame-alist '( (left . -1) (top . 0) (width . 170)  (height . 40) )) 
 (setq initial-frame-alist '( (left . 0)  (top . 0) (width . 190) (height . 50) ))
 
-;; Custom font
-(setq myfont "Bitstream Vera Sans Mono-11:bold")
-
-(progn (set-default-font myfont)
-       (add-to-list 'default-frame-alist (cons 'font myfont)))
 
 ;; Several mysterious but important customizations.
 (set-input-mode t nil t)
@@ -73,5 +69,6 @@
 
 ;; COLOR!
 (load-theme 'twilight)
+
 
 ;;; init.el ends here
