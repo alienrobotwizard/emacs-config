@@ -4,7 +4,8 @@
 
 ;; Install these packages if they do not exist
 (defvar my-packages '(better-defaults idle-highlight twilight-theme
-                                      js2-mode json-mode web-mode))
+                                      js2-mode json-mode web-mode
+                                      dockerfile-mode docker-tramp))
 
 (package-initialize)
 (unless package-archive-contents
@@ -34,6 +35,7 @@
 (require 'uniquify)
 (require 'ansi-color)
 (require 'recentf)
+(require 'tramp-cmds)
 
 ;; Taking a lot of stuff from old emacs starter kit
 (require 'starter-kit-defuns)

@@ -15,4 +15,11 @@
 ;; json
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
+(defun refresh-buffer-on-save()
+  (interactive) (revert-buffer t t))
+
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (add-hook 'after-save-hook 'refresh-buffer-on-save nil 'make-it-local)))
+
 (provide 'thedatachef-javascript)
