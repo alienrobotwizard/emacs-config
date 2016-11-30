@@ -48,6 +48,7 @@
 (require 'starter-kit-ruby)
 (require 'thedatachef-keybindings)
 (require 'thedatachef-javascript)
+(require 'thedatachef-modes)
 (require 'thedatachef-lookandfeel)
 
 (load custom-file 'noerror)
