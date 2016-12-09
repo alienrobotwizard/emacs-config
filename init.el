@@ -65,6 +65,7 @@
 (put 'upcase-region	 'disabled nil)
 (put 'downcase-region	 'disabled nil)
 (prefer-coding-system    'utf-8)
+(setq default-tab-width 2)
 
 ;; Display column number on mode line	
 (column-number-mode t)		
