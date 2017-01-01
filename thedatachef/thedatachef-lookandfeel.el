@@ -1,6 +1,7 @@
 (require 'ansi-color)
 
 ;; Custom font
+;; (ubuntu - apt-get install ttf-bitstream-vera)
 (setq myfont "Bitstream Vera Sans Mono-11:bold")
 
 (progn (set-default-font myfont)
