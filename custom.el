@@ -34,7 +34,7 @@
  '(current-language-environment "UTF-8")
  '(custom-safe-themes
    (quote
-    ("6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" default)))
+    ("51e228ffd6c4fff9b5168b31d5927c27734e82ec61f414970fc6bcce23bc140d" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" default)))
  '(default-major-mode (quote text-mode) t)
  '(default-truncate-lines t t)
  '(develock-max-column-plist

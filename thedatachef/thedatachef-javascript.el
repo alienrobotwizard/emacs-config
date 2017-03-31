@@ -1,25 +1,18 @@
 (require 'web-mode)
 (require 'js2-mode)
+(require 'nvm)
+(nvm-use (caar (last (nvm--installed-versions))))
 
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+(with-eval-after-load 'web-mode
+   
+  (setq web-mode-markup-indent-offset 2
+        web-mode-css-indent-offset 2
+        web-mode-code-indent-offset 2)
+  (with-eval-after-load 'flycheck
+    (push 'web-mode (flycheck-checker-get 'javascript-eslint 'modes))))
 
-(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-
-;; json
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-
-(defun refresh-buffer-on-save()
-  (interactive) (revert-buffer t t))
-
-(add-hook 'js2-mode-hook
-          (lambda ()
-            (add-hook 'after-save-hook 'refresh-buffer-on-save nil 'make-it-local)))
+(with-eval-after-load 'js
+  (setq js-indent-level 2))
 
 (provide 'thedatachef-javascript)

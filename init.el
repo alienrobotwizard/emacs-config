@@ -1,18 +1,5 @@
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-
-;; Install these packages if they do not exist
-(defvar my-packages '(better-defaults idle-highlight twilight-theme
-                                      js2-mode json-mode web-mode
-                                      dockerfile-mode docker-tramp))
-
-(package-initialize)
-(unless package-archive-contents
-  (package-refresh-contents))
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
 
 ;; Everything is a meta key!
 (setq       ns-option-modifier  'meta )

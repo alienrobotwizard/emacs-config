@@ -68,15 +68,5 @@
 
 ;;; Enhance Lisp Modes
 
-(dolist (x '(scheme emacs-lisp lisp clojure))
-  (font-lock-add-keywords
-   (intern (concat (symbol-name x) "-mode"))
-   '(("(\\|)" . 'esk-paren-face)))
-  (add-hook
-   (intern (concat (symbol-name x) "-mode-hook"))
-   (lambda ()
-     (idle-highlight +1)
-     (run-coding-hook))))
-
 (provide 'starter-kit-lisp)
 ;; starter-kit-lisp.el ends here
