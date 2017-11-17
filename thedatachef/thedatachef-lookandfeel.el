@@ -2,7 +2,7 @@
 
 ;; Custom font
 ;; (ubuntu - apt-get install ttf-bitstream-vera)
-(setq myfont "Bitstream Vera Sans Mono-11:bold")
+(setq myfont "Bitstream Vera Sans Mono-14:normal")
 
 (progn (set-default-font myfont)
        (add-to-list 'default-frame-alist (cons 'font myfont)))
